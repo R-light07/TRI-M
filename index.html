@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecano Metal de Moçambique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Efeito de partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Barra de progresso de scroll -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758099612/TRIM-01_qxuasd.png" alt="" width="60px">
+            </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#clients" class="nav-link">Clientes</a></li>
+                <li class="nav-item"><a href="#parceiros" class="nav-link">Parceiros</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content" id="heroContent">
+            <div class="titles">
+                <div class="main">
+                    <h1 class="hero-title">Soluções Industriais  de </h1>
+                    <h1 class="hero-title"><span class="thin-text">Alta Performance</span></h1>
+                </div>
+                <div class="bar"></div>
+                <div class="sub">
+                    <p class="hero-subtitle">Especialistas em Engenharia Mecânica, Sistemas de Armazenamento e Distribuição de Combustível, Construção Civil, Manutenção, Aluguer de Acomodações e Armazéns.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Nossos Serviços</a>
+                        <a href="#contact" class="btn btn-outline">Fale Connosco</a>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title" id="servicesTitle">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções completas e integradas para o setor industrial</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" id="serviceCard2">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Engenharia Mecânica</h3>
+                        <p>Projetos mecânicos personalizados, manutenção industrial especializada e desenvolvimento de soluções tecnológicas para otimização de processos.</p>
+                        <a href="#" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card" id="serviceCard1">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Manutenção</h3>
+                        <p>Projetos mecânicos personalizados, manutenção industrial especializada e desenvolvimento de soluções tecnológicas para otimização de processos.</p>
+                        <a href="#" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" id="serviceCard3">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Construção Industrial</h3>
+                        <p>Construção e montagem de estruturas metálicas, instalações industriais, gestão de obras e projetos de infraestrutura para o setor industrial.</p>
+                        <a href="#" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" id="serviceCard1">
+                    <div class="service-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Distribuição de Combustíveis</h3>
+                        <p>Projetos mecânicos personalizados, manutenção industrial especializada e desenvolvimento de soluções tecnológicas para otimização de processos.</p>
+                        <a href="#" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" id="serviceCard2">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Aluguer de Acomodações e Armazéns</h3>
+                        <p>Processos metalúrgicos avançados, tratamentos térmicos, análise de materiais e desenvolvimento de ligas metálicas para aplicações específicas.</p>
+                        <a href="#" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" id="serviceCard3">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Aluguer de Maquinaria</h3>
+                        <p>Construção e montagem de estruturas metálicas, instalações industriais, gestão de obras e projetos de infraestrutura para o setor industrial.</p>
+                        <a href="#" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title" id="aboutTitle">
+                <h2>Sobre Nós</h2>
+                <p>Uma empresa com tradição em compromisso com a excelência, segurança e inovação</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2><span id="anos"></span> anos de excelência em serviços industriais</h2>
+                    <p>Fundada em 1994, a TRI-M, Mecano Metal de Moçambique, é uma empresa 100% moçambicana que actua nas áreas de engenharia mecânica, construção civil e industrial, oferecendo soluções completas e de elevada qualidade em todas as províncias do país.</p>
+                    <p>Com sede na Matola, a cerca de 15 km de Maputo, a TRI-M expandiu suas actividades para os sectores de imobiliária, fornecimento de combustíveis, locação de maquinaria pesada e disponibilização de mão de obra qualificada, mantendo sempre o compromisso com a excelência, segurança e inovação.</p>
+                    
+                    <div class="features">
+                        <div class="feature" id="feature1">
+                            <div class="feature-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Alta Qualidade</h4>
+                                <p>Padrões rigorosos de controle de qualidade em todos os projetos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature" id="feature2">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Pontualidade</h4>
+                                <p>Compromisso com prazos e cronogramas estabelecidos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature" id="feature3">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Segurança</h4>
+                                <p>Rígidos protocolos de segurança em todas as operações</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" id="aboutImage">
+                    <iframe width="600" height="338" 
+                            src="https://res.cloudinary.com/dpybwlkmu/video/upload/v1758117540/Drone_mefyuh.mp4?playlist=VIDEO_ID&loop=1&autoplay=1&mute=1" 
+                            frameborder="0" 
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="section-title" id="clientsTitle">
+                <h2>Nossos Clientes</h2>
+                <p>Trabalhamos com as maiores empresas do sector industrial</p>
+            </div>
+            
+            <div class="clients-grid">
+                <div class="client-logo" id="client1">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274996/total_ujoux6.webp" alt="Cliente 1">
+                </div>
+                
+                <div class="client-logo" id="client2">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274996/rompco_ehflup.png" alt="Cliente 2">
+                </div>
+                
+                <div class="client-logo" id="client3">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274994/IHI_d9xvfm.png" alt="Cliente 3">
+                </div>
+                
+                <div class="client-logo" id="client4">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/MRV_qg7pjt.png" alt="Cliente 4">
+                </div>
+                
+                <div class="client-logo" id="client5">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/manica_wrqzig.png" alt="Cliente 5">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/naval_itqkhb.png" alt="Cliente 6">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/Petromoc_qujz9j.png" alt="Cliente 7">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/stam_n1rbwp.jpg" alt="Cliente 8">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/mota_eaeuom.png" alt="Cliente 9">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274995/vivo_u0mzjk.png" alt="Cliente 10">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274996/ctrg_qztzow.png" alt="Cliente 11">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274996/gimtl_p0rzcp.png" alt="Cliente 12">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274996/dpword_vzdbl9.png" alt="Cliente 13">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274996/Sasol_dzyuul.png" alt="Cliente 14">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274997/IGBTL_uuxid5.png" alt="Cliente 15">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758274997/cfm2_wnuady.png" alt="Cliente 16">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758275559/marchio-eni-page_hamea8.jpg" alt="Cliente 17">
+                </div>
+                
+                <div class="client-logo" id="client6">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758275559/grindrod_tsst4i.png" alt="Cliente 18">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parceiros" class="parceiros">
+        <div class="container">
+            <div class="section-title" id="clientsTitle">
+                <h2>Nossas Parcerias</h2>
+                <p>Estabelecemos parcerias estratégicas com as maiores empresas do setor industrial.</p>
+            </div>
+            
+            <div class="clients-grid">
+                <div class="client-logo" id="client1">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758275948/image-81_cykuwz.png" alt="Cliente 1" width="150">
+                </div>
+                
+                <div class="client-logo" id="client2">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758275947/SILEA_ea4teh.jpg" alt="Cliente 2" width="150">
+                </div>
+                
+                <div class="client-logo" id="client3">
+                    <img src="https://res.cloudinary.com/dpybwlkmu/image/upload/v1758275947/gedik_logo_ekq6jm.jpg" alt="Cliente 3" width="150">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title" id="contactTitle">
+                <h2>Entre em Contato</h2>
+                <p>Estamos à disposição para atender suas necessidades</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" id="contactItem1">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Endereço</h4>
+                            <p>Rua de Palma, 406, C.P-25<br>Matola</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" id="contactItem2">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Telefone</h4>
+                            <p>+258 84 316 6230 / 82 316 6230</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" id="contactItem3">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>recepcao@trim-mz.net</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" id="contactItem4">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 7h às 17h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" id="contactForm">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TRI-M</h3>
+                    <p>Especialistas em Engenharia Mecânica, Sistemas de Armazenamento e Distribuição de Combustível, Construção Civil, Manutenção, Aluguer de Acomodações e Armazéns.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Engenharia Mecânica</a></li>
+                        <li><a href="#">Distribuição de Combustível</a></li>
+                        <li><a href="#">Construção Civil</a></li>
+                        <li><a href="#">Manutenção</a></li>
+                        <li><a href="#">Aluguer de Acomodações e Armazéns</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#clients">Clientes</a></li>
+                        <li><a href="#parceiros">Parceiros</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Inscreva-se para receber nossas atualizações e notícias do setor.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Seu email" required>
+                        </div>
+                        <button type="submit" class="btn submit-btn">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Todos os direitos reservados - Desenvolvido por</p>
+                <div class="developer">
+                    <span>Desenvolvido por</span>
+                    <a href="www.itlaite.com" target="_blank">Rui Laite</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Inicializar partículas
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 30, density: { enable: true, value_area: 800 } },
+                color: { value: "#FFC107" },
+                shape: { type: "circle" },
+                opacity: { value: .8, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#FFC107",
+                    opacity: 0.5,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Menu Mobile
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Progress bar
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+
+        // Reveal animations on scroll
+        function checkScroll() {
+            const elementsToReveal = document.querySelectorAll('.section-title, .service-card, .feature, .about-image, .client-logo, .contact-item, .contact-form');
+            
+            elementsToReveal.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+
+            // Hero content animation
+            const heroContent = document.getElementById('heroContent');
+            if (heroContent.getBoundingClientRect().top < window.innerHeight - 100) {
+                heroContent.classList.add('visible');
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+        const anoInicio = 1994;
+        const anoAtual = new Date().getFullYear();
+        const anosPassados = anoAtual - anoInicio;
+
+        document.getElementById("anos").textContent = anosPassados;
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+    
+    </script>
+</body>
+</html>
