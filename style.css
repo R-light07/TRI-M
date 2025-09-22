@@ -486,6 +486,11 @@ section {
     transform: scale(1.05);
 }
 
+iframe {
+     width: 600px;
+     height: 338px;
+}
+
 /* Clients Section */
 .clients {
     background-color: var(--gray);
@@ -817,6 +822,12 @@ footer::before {
     
     .about-image {
         order: -1;
+    }
+
+    iframe {        
+        width: 100%;          /* take full width of parent */
+        aspect-ratio: 600 / 338;  /* keeps correct height */
+        max-width: 600px;      /* prevent blowing up */
     }
 }
 
