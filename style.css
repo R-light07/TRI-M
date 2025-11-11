@@ -186,17 +186,18 @@ header.scrolled {
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 600;
+    line-height: 1;
     text-align: end;
 }
 
 .hero-title .thin-text {
-    font-weight: 300;
+    font-weight: 400;
+    color: var(--yellow);
 }
 
 .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     font-weight: 300;
     text-align: start;
@@ -464,10 +465,11 @@ section {
 .about-image {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.034);
     opacity: 0;
     transform: translateX(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-bottom: 20px;
 }
 
 .about-image.visible {
@@ -790,9 +792,14 @@ footer::before {
     color: #ccc;
 }
 
+.footer-bottom span {
+    font-size: 14px;
+}
+
 .footer-bottom a {
-    color: #2678e4;
+    color: var(--yellow);
     text-decoration: none;
+    font-size: 14px;
 }
 
 /* Scroll progress bar */

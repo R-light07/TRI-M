@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global View - Our Worldwide Locations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 3rem 0;
+        }
+        
+        .map-section {
+            margin-bottom: 3rem;
+        }
+        
+        .map-container {
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+        
+        .map-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .zoom-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .zoom-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .location-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .address-info {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .address-info h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .address-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .address-info i {
+            margin-right: 10px;
+            color: #3498db;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .business-hours {
+            margin-top: 2rem;
+        }
+        
+        .business-hours h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .hours-table {
+            width: 100%;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hours-table td {
+            padding: 8px 0;
+        }
+        
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        .global-offices {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .global-offices h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .office-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .office-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .office-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .office-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-card p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .map-container iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">GlobalCorp</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Our Global Presence</h1>
+            <p>With offices across 5 continents, we're always close to our clients. Explore our worldwide locations.</p>
+        </div>
+    </section>
+    
+    <section class="content">
+        <div class="container">
+            <div class="map-section">
+                <h2 style="text-align: center; margin-bottom: 1.5rem; color: #2c3e50;">Worldwide Overview</h2>
+                <div class="map-container">
+                    <!-- Google Maps Embed with zoom level set to 1 (most zoomed out) -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25496578.7451174!2d-10.866455849999998!3d38.66995745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        id="mainMap">
+                    </iframe>
+                </div>
+                <div class="map-controls">
+                    <button class="zoom-btn" onclick="zoomOut()">Zoom Out</button>
+                    <button class="zoom-btn" onclick="zoomIn()">Zoom In</button>
+                    <button class="zoom-btn" onclick="resetZoom()">Reset View</button>
+                </div>
+            </div>
+            
+            <div class="location-info">
+                <div class="address-info">
+                    <h2>Our Headquarters</h2>
+                    <p><i>📍</i> 123 Global Avenue, Suite 100<br>New York, NY 10001, USA</p>
+                    <p><i>📞</i> +1 (123) 456-7890</p>
+                    <p><i>✉️</i> headquarters@globalcorp.com</p>
+                    
+                    <div class="business-hours">
+                        <h3>Business Hours</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday - Friday</td>
+                                <td>9:00 AM - 6:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="global-offices">
+                    <h2>Our Global Offices</h2>
+                    <div class="office-grid">
+                        <div class="office-card">
+                            <h3>London, UK</h3>
+                            <p>📌 45 Business Street</p>
+                            <p>📞 +44 20 7946 0958</p>
+                        </div>
+                        <div class="office-card">
+                            <h3>Tokyo, Japan</h3>
+                            <p>📌 78 Innovation Avenue</p>
+                            <p>📞 +81 3 1234 5678</p>
+                        </div>
+                        <div class="office-card">
+                            <h3>Sydney, Australia</h3>
+                            <p>📌 22 Harbour View</p>
+                            <p>📞 +61 2 9876 5432</p>
+                        </div>
+                        <div class="office-card">
+                            <h3>São Paulo, Brazil</h3>
+                            <p>📌 15 Progresso Road</p>
+                            <p>📞 +55 11 3456 7890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 GlobalCorp. All rights reserved. | Connecting the world through innovation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Current zoom level
+        let currentZoom = 1;
+        
+        function updateMap() {
+            const mapFrame = document.getElementById('mainMap');
+            // This is a simplified approach - in a real implementation, 
+            // you would use the Google Maps JavaScript API for full control
+            alert("In a real implementation, this would adjust the map zoom using the Google Maps API. For this demo, we're using a static embed.");
+        }
+        
+        function zoomOut() {
+            if (currentZoom > 1) {
+                currentZoom--;
+                updateMap();
+            }
+        }
+        
+        function zoomIn() {
+            if (currentZoom < 5) {
+                currentZoom++;
+                updateMap();
+            }
+        }
+        
+        function resetZoom() {
+            currentZoom = 1;
+            updateMap();
+        }
+    </script>
+</body>
+</html>
