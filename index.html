@@ -179,7 +179,7 @@
                 
                 <div class="location">
                     <div class="about-image" id="aboutImage">
-                        <iframe src="https://res.cloudinary.com/dpybwlkmu/video/upload/v1762845828/trim_emqi35.mp4" 
+                        <iframe id="meuVideo" src="https://res.cloudinary.com/dpybwlkmu/video/upload/v1762845828/trim_emqi35.mp4" 
                                 frameborder="0" 
                                 allow="autoplay; encrypted-media" 
                                 allowfullscreen>
@@ -564,6 +564,17 @@
 
         document.getElementById("year").textContent = new Date().getFullYear();
     
+        
+        const video = document.getElementById('meuVideo');
+
+        video.loop = true;
+        
+        // Tenta ativar áudio após um clique do usuário
+        document.addEventListener('click', () => {
+            video.muted = false; // Habilita áudio
+            video.play(); // Garante a reprodução
+        });
+
     </script>
 
 </body>
