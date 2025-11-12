@@ -120,7 +120,7 @@ header.scrolled {
     align-items: center;
     color: var(--white);
     text-align: center;
-    margin-top: 80px;
+    margin-top: 85px;
     position: relative;
     overflow: hidden;
 }
@@ -769,4 +769,5 @@ footer::before {
     .service-image {
         order: -1;
     }
+
 }
