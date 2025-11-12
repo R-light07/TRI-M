@@ -659,17 +659,20 @@ textarea.form-control {
 }
 
 .submit-btn {
-    background-color: var(--yellow);
-    color: var(--black);
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-fast);
     border: none;
     cursor: pointer;
-    font-weight: 600;
-    width: 100%;
+    background-color: var(--yellow);
 }
 
 .submit-btn:hover {
-    background-color: var(--black);
-    color: var(--white);
+    border: 1px solid var(--black);
+    transition: ease-in 3s;
 }
 
 /* Footer */
@@ -903,4 +906,5 @@ footer::before {
         margin: 10px auto;
         width: 200px;
     }
+
 }
