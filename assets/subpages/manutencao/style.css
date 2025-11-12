@@ -115,12 +115,11 @@ header.scrolled {
 /* Hero Section para página de serviço */
 .service-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://res.cloudinary.com/dpybwlkmu/image/upload/v1762853896/WhatsApp_Image_2025-10-28_at_13.16.50_rlh6ct.jpg') no-repeat center center/cover;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     color: var(--white);
     text-align: center;
-    margin-top: 80px;
     position: relative;
     overflow: hidden;
 }
@@ -653,4 +652,5 @@ footer::before {
     .service-image {
         order: -1;
     }
+
 }
