@@ -580,6 +580,14 @@
             video.play(); // Garante a reprodução
         });
 
+        // Adicionar interação via JavaScript
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', (e) => {
+            e.preventDefault();
+            const menu = dropdown.querySelector('.dropdown-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
     </script>
 
 </body>
