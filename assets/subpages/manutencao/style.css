@@ -116,7 +116,7 @@ header.scrolled {
 .service-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://res.cloudinary.com/dpybwlkmu/image/upload/v1762853896/WhatsApp_Image_2025-10-28_at_13.16.50_rlh6ct.jpg') no-repeat center center/cover;
     height: 60vh;
-    margin-top: 80px;
+    margin-top: 85px;
     display: flex;
     align-items: center;
     color: var(--white);
@@ -655,6 +655,7 @@ footer::before {
     }
 
 }
+
 
 
 
