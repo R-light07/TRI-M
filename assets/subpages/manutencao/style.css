@@ -116,11 +116,11 @@ header.scrolled {
 .service-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://res.cloudinary.com/dpybwlkmu/image/upload/v1762853896/WhatsApp_Image_2025-10-28_at_13.16.50_rlh6ct.jpg') no-repeat center center/cover;
     height: 60vh;
-    margin-top: 85px;
     display: flex;
     align-items: center;
     color: var(--white);
     text-align: center;
+    margin-top: 80px;
     position: relative;
     overflow: hidden;
 }
@@ -304,9 +304,11 @@ section {
 .gallery-item {
     border-radius: 15px;
     overflow: hidden;
+    cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition-slow);
     height: 250px;
+    position: relative;
 }
 
 .gallery-item:hover {
@@ -319,10 +321,124 @@ section {
     height: 100%;
     object-fit: cover;
     transition: var(--transition-slow);
+    display: block;
 }
 
 .gallery-item:hover img {
     transform: scale(1.1);
+}
+
+.image-number {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.671);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+ /* Modal/Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-image-container {
+    max-width: 90%;
+    max-height: 80%;
+    position: relative;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #ff5252;
+}
+
+.lightbox-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.lightbox-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lightbox-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.lightbox-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.lightbox-counter {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.image-info {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    max-width: 600px;
 }
 
 /* Contact Section */
@@ -653,9 +769,4 @@ footer::before {
     .service-image {
         order: -1;
     }
-
 }
-
-
-
-
