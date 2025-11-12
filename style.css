@@ -117,6 +117,35 @@ header.scrolled {
     width: 100%;
 }
 
+/* Dropdown oculto por padrão */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilização dos links */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+}
+
 .mobile-menu-btn {
     display: none;
     font-size: 1.5rem;
@@ -908,3 +937,4 @@ footer::before {
     }
 
 }
+
