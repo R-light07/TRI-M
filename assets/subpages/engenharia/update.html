@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Projetos</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Galeria de Projetos -->
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            <div class="gallery-grid" id="projectsGallery">
+                <!-- Os cards dos projetos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Página de Detalhes do Projeto (inicialmente oculta) -->
+    <section class="project-detail" id="projectDetail" style="display: none;">
+        <div class="container">
+            <div class="project-header">
+                <h2 class="project-detail-title" id="projectDetailTitle">Título do Projeto</h2>
+                <p class="project-description" id="projectDetailDescription">Descrição do projeto...</p>
+            </div>
+            <div class="project-gallery" id="projectGallery">
+                <!-- As imagens da galeria serão inseridas aqui via JavaScript -->
+            </div>
+            <a href="#" class="back-button" id="backButton">Voltar para a Galeria</a>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
